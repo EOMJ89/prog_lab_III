@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 26</title>
+    <script src="./clase02_ejercicio26.js"></script>
+</head>
+<body>
+    <!-- 26- Realizar una página HTML que contenga un cuadro de texto, un botón y una lista
+    desordenada con los siguientes elementos:
+    a. Programación I
+    b. Programación II
+    c. Programación III
+    Se pide crear una función TypeScript que permita añadir nuevos elementos a la lista cada
+    vez que se pulsa sobre el botón. Utilizar las funciones DOM para crear nuevos nodos y
+    añadirlos a la lista existente. La función recibirá como únicos parámetros la cadena que
+    tendrá el elemento nuevo de la lista y el nombre de la lista desordenada. -->
+
+    <table align="center">
+        <tr><td>Ingrese el nuevo elemento<br>
+            <input type="text" id="cuadroText" placeholder="Ingrese...">
+        </td></tr>
+        <tr><td>
+            <input type="button" id="botonAñdir" value="Añadir" onclick="AniadirElemento()">
+        </td></tr>
+        <tr>
+            <td>
+                <ul id="lista">
+                    <li>Programación I</li>
+                    <li>Programación II</li>
+                    <li>Programación III</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

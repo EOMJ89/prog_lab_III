@@ -1,0 +1,19 @@
+.titulo {
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.resumen {
+    font-size: 30px;
+    text-align: justify;
+    color: crimson;
+}
+
+.noticia {
+    font-size: 25px;
+    text-align: justify;
+    text-indent: 50px;
+}

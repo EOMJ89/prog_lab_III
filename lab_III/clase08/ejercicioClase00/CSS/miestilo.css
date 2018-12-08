@@ -1,0 +1,39 @@
+span {
+    color: darkblue;
+    font-size: 120%;
+    font-family: 'Times New Roman';
+}
+
+input {
+    background-color: black;
+    color: white;
+    font-size: 50px;
+}
+
+input[type="button"] {
+    background-color: coral;
+    color: white;
+    font-size: 50px;
+    position: relative;
+    left: 70%;
+}
+
+button {
+    background-color: coral;
+    color: white;
+    font-size: 50px;
+    position: relative;
+    left: 70%;
+}
+
+form {
+    width: 50%;
+}
+
+.error {
+    color: red;
+}
+
+.exito {
+    color: green;
+}

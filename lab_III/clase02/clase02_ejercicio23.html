@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 23</title>
+    <script src="./clase02_ejercicio23.js"></script>
+</head>
+<body>
+        <!-- 23-Crear una página que posea un formulario que permita el ingreso del nombre, apellido,
+        email y cantidad de horas trabajadas a la semana de un operario. Al pulsar el botón
+        btnCalcular, se invocará a una función que calcule y muestre en un cuadro de texto (INPUT
+        type=text) el salario mensual del operario. El salario se calculará por medio de la cantidad de
+        horas trabajadas al mes por un coeficiente. Dicho coeficiente lo retornará la función
+        ObtenerCoeficiente (por el momento será siempre 6.88).-->
+        <table>
+            <tr>
+                <td>
+                    Nombre<br>
+                    <input type="text" id="txtNombre" placeholder="Ingrese su nombre...">
+                    <br>Apellido<br>
+                    <input type="text" id="txtApellido" placeholder="Ingrese su apellido...">
+                    <br>Email<br>
+                    <input type="email" id="txtEmail" placeholder="Ingrese su mail...">
+                    <br>Horas trabajadas<br>
+                    <input type="number" id="txtNumero" placeholder="Ingrese su nombre...">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><input type="button" value="Calcular" onclick="CalcularSalario()">
+                    <p id="auxCalculo"></p>
+                </td>
+            </tr>
+        </table>
+</body>
+</html>

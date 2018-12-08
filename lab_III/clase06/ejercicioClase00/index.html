@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SUBIR ARCHIVOS -- CON AJAX --</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <!-- Libreria de jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+  <script src="frontend.js"></script>
+</head>
+
+<body style="background-color:teal">
+  <div class="container" style="background-color:darkgoldenrod">
+    <br>
+    <h2>AJAX - Archivos</h2>
+    <br>
+    <div class="row responsive-utilities-test visible-on">
+
+      <table class="table table" style="width:90%">
+        <tr>
+          <td style="width:50%">
+            <table class="table table-hover" style="background-color:darksalmon">
+              <tr>
+                <td><input type="file" id="foto" style="color:blue" /></td>
+              </tr>
+              <tr>
+                <td><input type="button" value="TestFoto" class="btn btn-success" onclick="SubirFoto()"/></td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <div class="" style="background-color:lavenderblush;">
+              <table border="1" style="width:100%">
+                <tr>
+                  <td style="text-align:center">
+                    <img id="imgFoto" src="./BACKEND/usr_default.jpg" width="250px" height="250px" />
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

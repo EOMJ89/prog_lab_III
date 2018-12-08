@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 35 y 36</title>
+</head>
+<body>
+    <form method="post" action="AdminDestinos.php">
+    <table border="1" align="center">
+        <thead>
+            <th>Destinos</th>
+        </thead>
+        <tr>
+            <td><select name="selectLugar" required>
+                    <option value="RJ">R&iacute;o de Janeiro</option>
+                    <option value="PE">Punta del Este</option>
+                    <option value="LH">La Habana</option>
+                    <option value="MM">Miami</option>
+                    <option value="IB">Ibiza</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                M&eacute;todo de Pago<br>
+                <input type="radio" name="pagoOpcion" value="1" checked>Efectivo<br>
+                <input type="radio" name="pagoOpcion" value="2">Tarjeta de D&eacute;bito o Cr&eacute;dito
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Cantidad de Pasajes<br>
+                <input type="number" name="cantPasajes" min="1">
+            </td>
+        </tr>
+        <tr>
+            <td align="center"><input type="submit" name="enviar" value="Mostrar Precio"></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

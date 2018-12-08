@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 37</title>
+</head>
+<body>
+    <form method="post" action="AdminSolicitud.php">
+    <table border="0" align="center">
+        <thead>
+            <th colspan="2">Solicicud de Empleo</th>
+        </thead>
+        <tr>
+            <td>Nombre</td>
+            <td><input type="text" name="txtNombre"></td>
+        </tr>
+        <tr>
+            <td>Apellido</td>
+            <td><input type="text" name="txtApellido"></td>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td><input type="number" name="txtEdad" min="18"></td>
+        </tr>
+        <tr>
+            <td>Direccion</td>
+            <td><input type="text" name="txtDireccion"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="txtEmail"></td>
+        </tr>
+        <tr>
+            <td>Curriculum</td>
+            <td><textarea name="txtCurriculum">TextArea</textarea></td>
+        </tr>
+        <tr align="right">
+            <td colspan="2"><input type="submit" name="enviar" value="Enviar Solicitud"></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

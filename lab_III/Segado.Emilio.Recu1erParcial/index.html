@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Recuperatorio Primer Parcial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="FRONTEND/ajax.js"></script>
+  <script src="FRONTEND/Ente.js"></script>
+  <script src="FRONTEND/Alien.js"></script>
+  <script src="FRONTEND/Manejadora.js"></script>
+</head>
+
+<body style="background-color:darkgrey">
+ <br>
+  <div class="container" style="background-color:lightblue">
+    <br>
+    <h2 style="background-color:gray;color:ghostwhite">Segado</h2>
+    <br>
+    <h4>ABM - Alien</h4>
+    <br>
+    <div class="row responsive-utilities-test visible-on">
+
+      <table class="table table" style="width:90%">
+        <tr>
+          <td style="width:45%">
+            <table class="table table-hover" style="background-color:cornflowerblue">
+              <tr>
+                <td><label class="col-md-2 control-label">Cuadrante</label></td>
+                <td><input type="text" id="cuadrante" /></td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Edad</label></td>
+                <td><input type="text" id="edad" /></td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Altura</label></td>
+                <td><input type="text" id="altura" /></td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Raza</label></td>
+                <td><input type="text" id="raza" /></td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Planeta Origen</label></td>
+                <td><select id="cboPlaneta" style="max-width:180px;min-width:130px" > 
+                    <option>Melmac</option>
+                    <option>Kriptón</option>
+                    <option>Vulcano</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Foto</label></td>
+                <td><input type="file" id="foto" name="foto" ></td>
+              </tr>
+              <tr>
+                  <td colspan="2" style="text-align:center">
+                      <div style="height:100px"><img id="imgFoto" src="./BACKEND/fotos/alien_defecto.jpg" height="100px" width="300px" /></div><!-- PREVISUALIZACION -->
+                  </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input type="button" value="Agregar" id="btn-agregar" class="btn btn-success" onclick="RecuperatorioPrimerParcial.Manejadora.AgregarAlien()"/>
+                  <input type="button" value="Mostrar" class="btn btn-info" onclick="RecuperatorioPrimerParcial.Manejadora.MostrarAliens()" />
+                  <input type="button" value="Guardar en LocalStorage" class="btn btn-success" onclick="RecuperatorioPrimerParcial.Manejadora.GuardarEnLocalStorage()" />
+                  <input type="button" value="Verificar y Agregar" class="btn btn-danger" onclick="RecuperatorioPrimerParcial.Manejadora.VerificarExistencia()"/>
+                  <input type="button" value="Obtener Aliens por cuadrante" class="btn btn-default" onclick="RecuperatorioPrimerParcial.Manejadora.ObtenerAliensPorCuadrante()"/>
+                  <input type="button" value="Filtrar por Pais" class="btn btn-info"  />
+                  <input type="button" value="Cargar Paises" class="btn btn-warning"  />
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <div class="" style="background-color:lavenderblush;">
+              <div id="divTabla">
+                tabla aqu&iacute;...
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+    <input type="hidden" id="hdnIdModificacion"><!-- PARA MODIFICAR -->
+    <div id="divSpinner" style="display:none;position:absolute"><img id="imgSpinner" src="./BACKEND/gif-load.gif" /></div><!-- PARA EL SPINNER -->
+  </div>
+</body>
+
+</html>

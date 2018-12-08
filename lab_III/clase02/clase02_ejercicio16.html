@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 16</title>
+    <script src="./clase02_ejercicio16.js"></script>
+</head>
+<body>
+    <form>
+        <table align="center" border="1">
+            <th colspan="2">
+                <h1>Ingrese sus datos</h1>
+            </th>
+            <tr><td>Nombre<br>
+                <input type="text" placeholder="Ingrese su nombre..." id="txtNombre">
+            </td></tr>
+            <tr><td>Mail<br>
+                <input type="email" placeholder="Ingrese su mail..." id="txtMail">
+            </td></tr>
+            <tr><td>DNI<br>
+                <input type="number" placeholder="Ingrese su DNI..." id="txtDNI">
+            </td></tr>
+            <tr><td>Curriculum Vitae<br>
+                <textarea rows="5" col="30" placeholder="Escriba su CV..." id="txtAreaCV"></textarea>
+            </td></tr>
+            <tr><td>
+                <input type="button" name="btnEnviar" value="Enviar" onclick="EnviarAlerta()">
+            </td></tr>
+        </table>
+    </form>
+</body>
+</html>

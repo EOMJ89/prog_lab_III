@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Registro</title>
+        <link rel="stylesheet"
+            href="./librerias/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet"
+            href="./librerias/bootstrapvalidator/dist/css/bootstrapValidator.css"
+            />
+        <script type="text/javascript"
+            src="./librerias/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript"
+            src="./librerias/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript"
+            src="./librerias/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+        <!-- Scripts Nuevos -->
+        <link rel="stylesheet"
+            href="./estilos/parcial.css" />
+        <script type="text/javascript" src="./frontend/registroValidator.js"></script>
+        <script type="text/javascript" src="./frontend/login.js"></script>
+        <script type="text/javascript" src="./frontend/registro.js"></script>
+    </head>
+    <body>
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-2"></div>
+                <span class="titulo">Registro</span><br>
+
+                <div class="col-md-2"></div>
+                <form class="well form-horizontal" id="registroForm" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Nombre</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                                <input name="nombre" class="form-control" type="text" id="nombreText" placeholder="Nombre">
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Apellido</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </span>
+                                <input name="apellido" class="form-control" type="text" id="apellidoText" placeholder="Apellido">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">E-mail</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-envelope"></i>
+                                </span>
+                                <input name="mail" class="form-control" type="text" id="mailText" placeholder="E-mail">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Legajo</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-folder-open"></i>
+                                </span>
+                                <input name="legajo" class="form-control" type="text" id="legajoText" placeholder="Legajo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Perfil</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-option-horizontal"></i>
+                                    </span>
+                                    <select name="perfil" class="selectpicker form-control" id="perfilText">
+                                        <option value="invitado">Invitado</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Foto</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-camera"></i>
+                                </span>
+                                <input name="foto" class="form-control" type="file" id="fotoFile">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Clae</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>
+                                </span>
+                                <input name="clave" class="form-control" type="password" id="claveText"> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Confirme su Clave</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>
+                                </span>
+                                <input name="claveDuplicada" class="form-control" type="password" id="claveDuplicadaText"> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" align="center">
+                        <label class="control-label col-md-1"></label>
+                        <button class="btn btn-primary col-md-4" type="submit" id="btnEnviar">
+                            Enviar<span class="glyphicon glyphicon-send"></span>
+                        </button>
+                        <label class="control-label col-md-2"></label>
+                        <button class="btn btn-warning col-md-4" type="reset">
+                            Limpiar
+                        </button>
+                    </div> 
+                </form>
+            </div>
+
+            <div class="alert alert-warning" style='display:none;'>
+                <button type="button" class="close" id="toggleAlert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div id="alertText"></div>
+            </div>
+        </div>
+    </body>
+</html>

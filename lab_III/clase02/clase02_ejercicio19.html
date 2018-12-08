@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 19</title>
+    <script src="./clase02_ejercicio19.js"></script>
+</head>
+<body>
+    <!-- 19- Confeccionar un formulario que muestre en un comboBox (SELECT) una serie de mails.
+    Luego permitir que el visitante seleccione uno o varios mails del cuadro de selección. -->
+
+    <form>
+        <table align="center" border="1">
+            <tr>
+                <th>Selecciones los mails que desee</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="chkYahoo">@yahoo.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="chkGmail">@gmail.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="chkHotmail">@hotmail.com</td>
+            </tr>
+            <tr>
+                <td align="center"><input type="button" id="aceptar" onclick="MostrarSeleccion()" value="Aceptar"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

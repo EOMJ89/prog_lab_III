@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 24 y 25</title>
+    <script src="./clase02_ejercicio24.js"></script>
+</head>
+<body>
+    <!-- 24- Realizar una página que permita el ingreso de: Apellido, Nombre, Dni y sexo de una
+    persona. Si el usuario pulsa el botón de confirmación se invocará a una función encargada de
+    validar cada uno de los datos ingresados (que tanto el nombre y apellido no estén vacíos,
+    que el documento sea numérico y que el sexo sea o ‘m’ o ‘f’).
+    
+    25- Agregarle al ejercicio anterior un mensaje, en color rojo (#ff0000), en aquellos campos
+    que no sean válidos.-->
+    <table align="center" border="1">
+        <tr><td><form>
+            Nombre<br>
+            <input type="text" id="txtNombre" placeholder="Ingrese su nombre...">
+            <p><font color="red" id="errorNombre"></font></p>
+            Apellido<br>
+            <input type="text" id="txtApellido" placeholder="Ingrese su apellido...">
+            <p><font color="red" id="errorApellido"></font></p>
+            DNI<br>
+            <input type="number" id="txtDni" placeholder="Ingrese su dni...">
+            <p><font color="red" id="errorDni"></font></p>
+            Sexo<br>
+            <input type="text" id="txtSexo" placeholder="Ingrese su sexo (f o m)...">
+            <p><font color="red" id="errorSexo"></font></p>
+        </form></td></tr>
+        <tr><td>
+            <input type="button" id="btnConfirm" value="Confirmar" onclick="AddErrorAll()">
+        </td></tr>
+    </table>
+</body>
+</html>

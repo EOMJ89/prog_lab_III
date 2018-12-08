@@ -1,0 +1,22 @@
+{
+  "name": "tp_prog_III",
+  "authors": [
+    "Emilio Segado <emiliosegado14@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "libs"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrapvalidator": "~0.5.3"
+  }
+}

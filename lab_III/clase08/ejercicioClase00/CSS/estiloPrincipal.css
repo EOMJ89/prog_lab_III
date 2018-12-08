@@ -1,0 +1,20 @@
+table {
+    margin-top: 55px;
+    margin-left: 10px;
+}
+
+.default {
+    background-color: white;
+}
+
+.oscuro {
+    background-color: darkgray;
+}
+
+.morado {
+    background-color: purple;
+}
+
+.colorado {
+    background-color: crimson;
+}

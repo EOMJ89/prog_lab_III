@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Text Validator</title>
+
+        <link rel="stylesheet" href="./librerias/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="./librerias/css/bootstrapValidator.css" />
+        <script type="text/javascript"
+            src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript"
+            src="./librerias/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript"
+            src="./librerias/js/bootstrapValidator.js"></script>
+
+
+        <!-- FUNCIONES PROPIAS -->
+        <script type="text/javascript" src="./FRONTEND/validator.js"></script>
+        <script type="text/javascript" src="./FRONTEND/funciones.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form action="./BACKEND/admin.php" id="loginForm" method="POST"
+                class="well form-horizontal">
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Nombre de Usuario</label>
+                    <div class="col-md-4 input-group-container">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+
+                            <input name="usuario" placeholder="Usuario"
+                                class="form-control" type="text"
+                                id="usuarioText">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Contrase&ntilde;a</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-asterisk"></i>
+                            <input name="password"
+                                placeholder="Contrase&ntilde;a"
+                                class="form-control" type="text"
+                                id="passwordText">
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-primary">Enviar
+                            <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

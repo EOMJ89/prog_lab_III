@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 21</title>
+    <script src="./clase02_ejercicio21.js"></script>
+</head>
+<body>
+    <!-- 21- Se necesita hacer una página que contenga dos cuadros de texto (dónde se ingresarán
+    números), un botón (con la leyenda ‘Calcular’) y cuatro controles de tipo ‘radioButton’ (suma,
+    resta, multiplicación y división). Cuando se pulsa el botón una función deberá mostrar el
+    resultado (en la consola y en otro cuadro de texto), de acuerdo al tipo de operación que el
+    usuario eligió. Utilizar la estructura ‘switch’. -->
+
+    <table align="center" border="1">
+        <tr>
+            <th colspan="2">Calculadora</th>
+        </tr>
+        <tr>
+            <td>Primer Operando<br><input type="number" id="primerOperando" placeholder="0"></td>
+            <td>Segundo Operando<br><input type="number" id="segundoOperando" placeholder="0"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <form name="opcionesOperaciones">
+                    Operaciones<br>
+                    <input type="radio" name="operaciones" value="+" checked>+<br>
+                    <input type="radio" name="operaciones" value="-">-<br>
+                    <input type="radio" name="operaciones" value="*">*<br>
+                    <input type="radio" name="operaciones" value="/">/<br>
+                </form>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" id="btnCalcular" value="Calcular" onclick="CalcularOperacion()"></td>
+        </tr>
+    </table>
+</body>
+</html>

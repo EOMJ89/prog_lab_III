@@ -1,0 +1,8 @@
+span {
+	text-transform: uppercase;
+}
+
+span.bigspace {
+	letter-spacing: 10px;
+	word-spacing: 10px;
+}

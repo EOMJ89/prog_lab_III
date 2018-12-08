@@ -1,0 +1,23 @@
+.underline {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+	color: blue	
+}
+a:active{
+	color: aquamarine
+}
+a:hover{
+	color : green;
+}
+a:visited{
+	color: blueviolet;
+}
+
+.pagename {
+    font-style: italic;
+}

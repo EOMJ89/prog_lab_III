@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 27</title>
+    <script src="clase02_ejercicio27.js"></script>
+</head>
+<body>
+    <!-- 27- Realizar una página HTML que contenga un cuadro de texto, un elemento div y un
+    botón. Al pulsar el botón se llamará a una función (que recibirá como parámetro el valor del
+    cuadro de texto) y mostrará en el div un combo (SELECT) con tantas opciones como indica
+    el valor del cuadro de texto. Utilizar las funciones DOM para crear los elementos. -->
+
+    <form align="center">
+        <tr>
+            <td>
+                Caja de texto<br>
+                <textarea rows="5" cols="30" id="txtOpciones">Ingrese sus opciones...</textarea><br>
+            </td>
+        </tr>
+        <tr>
+            <td>        
+                <div id="auxDiv"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="btnAgregar" onclick="CrearOpciones()" value="Aceptar">
+            </td>
+        </tr>
+    </form>
+
+</body>
+</html>

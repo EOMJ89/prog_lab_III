@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Comanda</title>
+
+        <link rel="stylesheet" href="./frontend/css/estilos.css" />
+        <link rel="stylesheet"
+            href="./librerias/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet"
+            href="./librerias/bootstrapvalidator/dist/css/bootstrapValidator.css"
+            />
+        <script type="text/javascript"
+            src="./librerias/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript"
+            src="./librerias/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript"
+            src="./librerias/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+        <!-- Script para Encuesta-->
+        <script type="text/javascript"
+            src="./frontend/Pedidos/encuestaValidator.js"></script>
+        <!-- Scripts para Pedido-->
+        <script type="text/javascript"
+            src="./frontend/Pedidos/pedidoValidator.js"></script>
+        <script type="text/javascript" src="./frontend/Pedidos/Pedido.js"></script>
+        <!-- Scripts Principales-->
+        <script type="text/javascript" src="./frontend/Pedidos/Funciones.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row well">
+                <button type="input" class="btn btn-warning" id="btnEmpleados">Seccion
+                    de Empleados</button>
+            </div>
+
+            <div clas="row">
+                <ul class="nav nab-tabs col-xs-12" role="tablist">
+                    <li role="presentation" class="col-sm-2">
+                        <a href="#ver" aria-controls="ver"
+                            role="tab"
+                            data-toggle="tab">Buscar Pedido</a>
+                    </li>
+                </ul>
+                <div class="tab-content col-xs-12">
+                    <div role="tabpanel" class="tab-pane fade in active"
+                        id="ver">
+                        <div class="row col-xs-12">
+                            <form id="pedidoForm" class="well
+                                form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-6 control-label">Codigo
+                                        de
+                                        la Mesa</label>
+                                    <div class="col-md-6
+                                        inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon
+                                                    glyphicon-user"></i>
+                                            </span>
+                                            <input name="mesaBuscar"
+                                                placeholder="Codigo"
+                                                class="form-control"
+                                                type="text"
+                                                id="mesaBuscarText">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-6 control-label">Codigo
+                                        del
+                                        pedido</label>
+                                    <div class="col-md-6
+                                        inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon
+                                                    glyphicon-asterisk"></i>
+                                            </span>
+                                            <input name="pedidoBuscar"
+                                                placeholder="Codigo Pedido"
+                                                class="form-control"
+                                                type="text"
+                                                id="pedidoBuscarText">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-6
+                                        inputGroupContainer">
+                                        <div class="input-group">
+                                            <input name="hiddenCodigo"
+                                                type="hidden"
+                                                id="idPedido">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-12" align="center">
+                                        <button type="submit" class="btn
+                                            btn-primary"
+                                            id="btnBuscar">Buscar Pedido
+                                            <span class="glyphicon
+                                                glyphicon-triangle-right"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="row col-xs-12">
+                            <div id="divEncuesta" align="center"></div>
+                            <div id="listaRestante"></div>
+                        </div>
+
+                        <div id="encuesta" class="modal fade"
+                            role="dialog"
+                            hidden>
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close"
+                                            data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Encuesta</h4>
+                                    </div>
+
+                                    <div class="modal-body" id="bodyForm">
+                                        <form id="encuestaForm" class="well
+                                            form-horizontal">
+                                            <label class="col-md-4
+                                                control-label">Complete los
+                                                siquientes campos...</label>
+                                            <div class="form-group">
+                                                <label class="col-md-4
+                                                    control-label">Mesa (1-10)</label>
+                                                <div class="col-md-4
+                                                    inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span
+                                                            class="input-group-addon">
+                                                            <i class="glyphicon
+                                                                glyphicon-hand-right"></i>
+                                                        </span>
+                                                        <input name="mesa"
+                                                            placeholder="0"
+                                                            class="form-control"
+                                                            type="number"
+                                                            id="mesaText">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="col-md-4
+                                                    control-label">Restaurante
+                                                    (1-10)</label>
+                                                <div class="col-md-4
+                                                    inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span
+                                                            class="input-group-addon">
+                                                            <i class="glyphicon
+                                                                glyphicon-hand-right"></i>
+                                                        </span>
+                                                        <input
+                                                            name="restaurante"
+                                                            placeholder="0"
+                                                            class="form-control"
+                                                            type="number"
+                                                            id="restauranteText">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="col-md-4
+                                                    control-label">Mozo (1-10)</label>
+                                                <div class="col-md-4
+                                                    inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span
+                                                            class="input-group-addon">
+                                                            <i class="glyphicon
+                                                                glyphicon-hand-right"></i>
+                                                        </span>
+                                                        <input name="mozo"
+                                                            placeholder="0"
+                                                            class="form-control"
+                                                            type="number"
+                                                            id="mozoText">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="col-md-4
+                                                    control-label">Cocinero
+                                                    (1-10)</label>
+                                                <div class="col-md-4
+                                                    inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span
+                                                            class="input-group-addon">
+                                                            <i class="glyphicon
+                                                                glyphicon-hand-right"></i>
+                                                        </span>
+                                                        <input name="cocinero"
+                                                            placeholder="0"
+                                                            class="form-control"
+                                                            type="number"
+                                                            id="cocineroText">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="col-md-4
+                                                    control-label">De una breve
+                                                    opinion.</label>
+                                                <div class="col-md-4
+                                                    inputGroupContainer">
+                                                    <div class="input-group">
+                                                        <span
+                                                            class="input-group-addon">
+                                                            <i class="glyphicon
+                                                                glyphicon-check"></i>
+                                                        </span>
+                                                        <input name="review"
+                                                            class="form-control"
+                                                            type="text"
+                                                            id="reviewText">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-xs-6"
+                                                    align="right">
+                                                    <button type="submit"
+                                                        class="btn
+                                                        btn-primary"
+                                                        id="btnGuardar">Guardar
+                                                        <span class="glyphicon
+                                                            glyphicon-send"></span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="col-xs-6"
+                                                    align="left"
+                                                    id="btnLimpiar">
+                                                    <button type="reset"
+                                                        class="btn
+                                                        btn-info">Limpiar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn
+                                            btn-default" id="modal-btn-si"
+                                            data-dismiss="modal">Okay</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

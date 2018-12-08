@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ingreso de Empleados</title>
+    <script src="./ManejadorForm.js"></script>
+</head>
+<body>
+    <form method="POST" action="administracion.php">
+        <table align="center" border="1">
+            <tr>
+                <th colspan="2">Formulario para Empleado</th>
+            </tr>
+            <tr>
+                <td>Legajo</td>
+                <td><input type="number" id="txtLegajo" name="legajo"></td>
+            </tr>
+            <tr>
+                <td>Apellido</td>
+                <td><input type="text" id="txtApellido" name="apellido"></td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" id="txtNombre" name="nombre"></td>
+            </tr>
+            <tr>
+                <td>Dni</td>
+                <td><input type="number" id="txtDni" name="dni" min="10000000"></td>
+            </tr>
+            <tr>
+                <td>Sexo</td>
+                <td><select id="slcSexo" name="sexo">
+                    <option value="m">Hombre</option>
+                    <option value="f">Mujer</option>
+                </td>
+            </tr>
+            <tr>
+                <td>Sueldo</td>
+                <td><input type="number" id="txtSueldo" name="sueldo" min="8000"></td>
+            </tr>
+            <!--<tr>
+                <td colspan="2" align="right"><input type="submit" name="enviar" value="Aceptar" onclick="return AgregarEmpleado()"></td>
+            </tr>-->
+            <tr>
+            <td colspan="2" align="right"><input type="submit" name="enviar" value="Aceptar"></td>
+            </tr>
+            <tr><td colspan="2"><div id="auxDiv"></div></td></tr>
+        </table>
+    </form>
+</body>
+</html>

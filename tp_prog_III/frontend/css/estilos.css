@@ -1,0 +1,3 @@
+.form-horizontal .control-label {
+    text-align: left !important;/* El !important indica prioridad sobre los otros estilos, en este caso el form*/
+}

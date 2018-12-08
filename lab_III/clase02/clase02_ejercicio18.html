@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 18</title>
+    <script src="./clase02_ejercicio18.js"></script>
+</head>
+<body>
+    <!-- 18- Confeccionar un formulario que solicite el ingreso del nombre de una persona y permita
+    votar el sitio. Mediante un control de tipo radio, el visitante puede elegir entre las siguientes
+    opciones: Excelente, Muy Bueno, Bueno, Regular y Malo. Al pulsar el botón, mostrar la
+    opción elegida por consola. -->
+
+    <form name="form1">
+        <table align="center" border="1">
+            <th colspan="2">
+                <h1>Ingrese sus datos</h1>
+            </th>
+            <tr><td>Nombre<br>
+                <input type="text" placeholder="Ingrese su nombre..." id="txtNombre">
+            </td></tr>
+            <tr><td>Mail<br>
+                <input type="radio" name="valoracion" value="Excelente" checked>Excelente<br>
+                <input type="radio" name="valoracion" value="Muy Bueno">Muy Bueno<br>
+                <input type="radio" name="valoracion" value="Bueno">Bueno<br>
+                <input type="radio" name="valoracion" value="Regular">Regular<br>
+                <input type="radio" name="valoracion" value="Malo">Malo<br>
+            </td></tr>
+            <tr><td><input type="button" id="aceptar" value="Aceptar" onclick="MostrarOpcion()"></td></tr>
+        </table>
+    </form>
+</body>
+</html>
