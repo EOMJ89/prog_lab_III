@@ -48,7 +48,7 @@ $app->options('/{ruta:.+}', function ($request, $response, $args) {
 $app->group('/Empleado', function () {
     $this->post('/', \EmpleadoApi::class . '::CargarEmpleado'); //Cargar -> Funciona
     $this->delete('/', \EmpleadoApi::class . '::BorrarEmpleado'); //Borrar -> Funciona
-    $this->post('/Modificar', \EmpleadoApi::class . '::ModificarEmpleado'); //Modificacion -> Funciona
+    $this->update('/Modificar', \EmpleadoApi::class . '::ModificarEmpleado'); //Modificacion -> Funciona
     $this->post('/Suspender', \EmpleadoApi::class . '::Suspender')->add(\MWComanda::class . '::VerificarSocio'); //Suspension ->Funciona
     $this->post('/ListaEmpleados', \EmpleadoApi::class . '::TraerTodosLosEmpleados')->add(\MWComanda::class . '::VerificarSocio'); //Listado de todos los empleados, deberia pedir permisos de admin
     $this->get('/TraerUno/{id}', \EmpleadoApi::class . '::TraerEmpleado'); //Traer un empleado según id    
